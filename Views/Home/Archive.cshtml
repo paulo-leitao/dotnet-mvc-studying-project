@@ -1,0 +1,40 @@
+@model IEnumerable<mvc_web_app.Models.Archive>
+
+@{
+    ViewData["Title"] = "Arquivos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Acesse os arquivos das lições apresentadas nas aulas do curso.</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+                <a> Mb</a>
+            </td>
+        </tr>
+    }
+    <tbody>
+</table>
