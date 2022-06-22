@@ -1,6 +1,5 @@
-# Build results
-[Bb]in/
+# Build result
+/bin
 
 # VSCode
-
-.vscode/
+/.vscode
